@@ -1,8 +1,8 @@
 # KenJolno's dwm build
 
-This is my personal setup for my desktop. dwm is a fast, small window manager for X.  
+This is my personal setup for my desktop, still working on it. dwm is a fast, small window manager for X.  
 
-![screenshot](./screenshot.jpg)  
+![screenshot](./screenshot.png)  
 
 Feel free to try it, but you might want to change a few lines in the config.h.  
 
@@ -17,3 +17,5 @@ Feel free to try it, but you might want to change a few lines in the config.h.
 - **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **File Manager**: [yazi](https://github.com/sxyazi/yazi)
 - **Browser**: [zen](https://github.com/hexapode/zenbrowser)
+- **Music Player**: [rmpc](https://github.com/mierak/rmpc)
+- **Audio Visualizer**: [cava](https://github.com/karlstav/cava)
