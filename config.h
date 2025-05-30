@@ -16,8 +16,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-					"JetbrainsMono Nerd Font:size=12",
-					"WenQuanYi Zen Hei Mono:size=12:type=Regular:antialias=true:autohint=true",
+					"JetbrainsMono Nerd Font:size=9",
+					"WenQuanYi Zen Hei Mono:size=9:type=Regular:antialias=true:autohint=true",
 };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -58,7 +58,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
     { "[@]",      spiral },
 	{ "[\\]",     dwindle },
@@ -91,6 +91,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *rofi[] = {"rofi", "-show", "drun", "-show", "icon", NULL };
+static const char *powermenu[] = {"rofi", "-show", "p", "-modi", "p:rofi-power-menu", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 static const char *browser[] = { "zen", NULL };
 static const char *filemanager[] = { "pcmanfm", NULL };
@@ -103,6 +104,7 @@ static const char *voltoggle[] = { "/home/blackswan/.dwm/voltoggle.sh", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = rofi } },
+	{ MODKEY|Mod1Mask,              XK_Return, spawn,          {.v = powermenu } },
 	{ MODKEY,	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,	                    XK_s,      spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser} },
